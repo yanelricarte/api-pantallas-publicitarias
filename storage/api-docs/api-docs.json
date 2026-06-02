@@ -1,8 +1,8 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "API LatinAd",
-        "description": "Documentación de la API de gestión de pantallas para LatinAd",
+        "title": "API de Pantallas Publicitarias",
+        "description": "Documentación de la API de gestión de pantallas publicitarias",
         "version": "1.0.0"
     },
     "paths": {

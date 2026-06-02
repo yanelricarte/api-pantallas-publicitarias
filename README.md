@@ -1,4 +1,4 @@
-# API de Pantallas Publicitarias - Desafío LatinAd
+# API de Pantallas Publicitarias
 
 Proyecto desarrollado con Laravel 11, MySQL y autenticación JWT.
 
@@ -30,8 +30,8 @@ Esta API permite gestionar pantallas publicitarias (displays) para distintos usu
 1. **Clonar el repositorio:**
 
 ```bash
-git clone https://github.com/tuusuario/desafio-latinad.git
-cd desafio-latinad
+git clone https://github.com/yanelricarte/api-pantallas-publicitarias.git
+cd api-pantallas-publicitarias
 ```
 
 2. **Instalar dependencias:**
@@ -52,7 +52,7 @@ Editar el archivo `.env` para establecer la conexión con MySQL:
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=latinad
+DB_DATABASE=pantallas_publicitarias
 DB_USERNAME=root
 DB_PASSWORD=secret
 ```
@@ -181,7 +181,7 @@ Desde allí se pueden consultar todos los endpoints, ver los esquemas, parámetr
 
 ## 📊 Pruebas con Postman
 
-Se incluye una colección de Postman exportada (`Desafio LatinAd.postman_collection.json`) en la raíz del proyecto. Incluye todos los endpoints:
+Se incluye una colección de Postman exportada (`api-pantallas-publicitarias.postman_collection.json`) en la raíz del proyecto. Incluye todos los endpoints:
 
 * Login
 * Listar

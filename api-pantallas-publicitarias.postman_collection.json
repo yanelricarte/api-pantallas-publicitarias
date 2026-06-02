@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "db25b47e-40d3-4b22-a075-534ecf228642",
-		"name": "LatinAd - API pantallas",
+		"name": "API de Pantallas Publicitarias",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "17913252"
 	},
