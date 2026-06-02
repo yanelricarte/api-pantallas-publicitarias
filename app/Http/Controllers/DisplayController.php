@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Display;
+use App\Http\Requests\StoreDisplayRequest;
+use App\Http\Requests\UpdateDisplayRequest;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use OpenApi\Annotations as OA;
@@ -82,16 +84,9 @@ class DisplayController extends Controller
      *     @OA\Response(response=422, description="Datos inválidos")
      * )
      */
-    public function store(Request $request)
+    public function store(StoreDisplayRequest $request)
     {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'description' => 'required|string',
-            'price_per_day' => 'required|numeric',
-            'resolution_height' => 'required|integer',
-            'resolution_width' => 'required|integer',
-            'type' => 'required|in:indoor,outdoor',
-        ]);
+        $validated = $request->validated();
 
         $validated['user_id'] = auth('api')->id();
         $display = Display::create($validated);
@@ -123,22 +118,13 @@ class DisplayController extends Controller
      *     @OA\Response(response=422, description="Datos inválidos")
      * )
      */
-    public function update(Request $request, Display $display)
+    public function update(UpdateDisplayRequest $request, Display $display)
     {
         if ($display->user_id !== auth('api')->id()) {
             return response()->json(['error' => 'No autorizado'], 403);
         }
 
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'description' => 'required|string',
-            'price_per_day' => 'required|numeric',
-            'resolution_height' => 'required|integer',
-            'resolution_width' => 'required|integer',
-            'type' => 'required|in:indoor,outdoor',
-        ]);
-
-        $display->update($validated);
+        $display->update($request->validated());
 
         return response()->json($display);
     }
