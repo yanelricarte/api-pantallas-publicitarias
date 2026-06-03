@@ -22,7 +22,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"email\": \"naranjaspintadas@gmail.com\",\r\n  \"password\": \"123\"\r\n}\r\n",
+					"raw": "{\r\n  \"email\": \"demo@example.com\",\r\n  \"password\": \"123\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"

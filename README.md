@@ -1,6 +1,6 @@
 # API de Pantallas Publicitarias
 
-Proyecto desarrollado con Laravel 11, MySQL y autenticación JWT.
+Proyecto desarrollado con Laravel 12, MySQL y autenticación JWT.
 
 ---
 
@@ -72,8 +72,8 @@ php artisan migrate --seed
 
 Esto crea un usuario demo:
 
-* **Email:** [naranjaspintadas@gmail.com](mailto:naranjaspintadas@gmail.com)
-* **Contraseña:** password
+* **Email:** demo@example.com
+* **Contraseña:** 123
 
 6. **Levantar el servidor:**
 
@@ -97,8 +97,8 @@ POST /api/login
 
 ```json
 {
-  "email": "naranjaspintadas@gmail.com",
-  "password": "password"
+  "email": "demo@example.com",
+  "password": "123"
 }
 ```
 
@@ -159,7 +159,7 @@ Content-Type: application/json
 
 ## 🔧 Tecnologías usadas
 
-* Laravel 11
+* Laravel 12
 * MySQL
 * Tymon JWT-Auth
 * Postman para pruebas de la API
@@ -219,6 +219,6 @@ Se incluye una colección de Postman exportada (`api-pantallas-publicitarias.pos
 ## 📌 Notas adicionales
 
 * El código fue escrito siguiendo PSR y buenas prácticas de Laravel.
-* Se evitaron valores sensibles hardcodeados. Se utilizan variables de entorno (`.env`).
+* Las credenciales reales se manejan por variables de entorno (`.env`). El usuario demo del seeder (`demo@example.com` / `123`) es solo para pruebas locales.
 * El archivo `.gitignore` incluye exclusión por defecto de dependencias, caché y archivos sensibles. No requiere modificaciones adicionales.
 * El proyecto puede desplegarse fácilmente en cualquier entorno compatible con PHP 8.2+, Composer y MySQL.
